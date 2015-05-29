@@ -1,0 +1,11 @@
+{
+  "name": "JSOnDemand",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zigolis/jsOndemand",
+  "license": "MIT",
+  "dependencies": {
+    "backbone": "~1.2.0",
+    "underscore": "~1.8.3",
+    "jquery": "~2.1.4"
+  }
+}
