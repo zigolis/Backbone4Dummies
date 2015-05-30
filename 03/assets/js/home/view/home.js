@@ -4,14 +4,14 @@ app.HomeView = Backbone.View.extend({
   el: 'header',
 
   events: {
-    'click h1' : 'printBackground'
+    'click h1' : 'print'
   },
 
   initialize: function() {
-    this.$('span').text('home/this.$');
+    this.$('span').text('home/this');
   },
 
-  printBackground: function() {
+  print: function() {
     this.$('span').css('background', '#ccc');
   }
 });
