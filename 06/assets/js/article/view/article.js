@@ -4,10 +4,10 @@ app.ArticleView = Backbone.View.extend({
   el: 'section',
 
   events: {
-    'submit form' : 'createArticle'
+    'submit form' : 'updateArticle'
   },
 
-  createArticle: function(e) {
+  updateArticle: function(e) {
     this.model = new app.ArticleModel({
       'id'      : 2,
       'title'   : this.$('[name="title"]').val(),
@@ -36,5 +36,5 @@ app.ArticleView = Backbone.View.extend({
     this.$('input[type=text], textarea').each(function(){
       $(this).val('');
     });
-  },
+  }
 });

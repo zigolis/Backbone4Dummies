@@ -1,7 +1,7 @@
 {
-  "name": "JSOnDemand",
+  "name": "Backbone4Dummies",
   "version": "0.0.1",
-  "homepage": "https://github.com/zigolis/jsOndemand",
+  "homepage": "https://github.com/zigolis/Backbone4Dummies",
   "license": "MIT",
   "dependencies": {
     "backbone": "~1.2.0",

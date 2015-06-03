@@ -35,5 +35,5 @@ app.ArticleView = Backbone.View.extend({
     this.$('input[type=text], textarea').each(function(){
       $(this).val('');
     });
-  },
+  }
 });
