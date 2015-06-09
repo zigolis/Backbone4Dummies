@@ -9,7 +9,7 @@ app.ArticleView = Backbone.View.extend({
 
   updateArticle: function(e) {
     this.model = new app.ArticleModel({
-      'id'      : 2,
+      'id'      : 15,
       'title'   : this.$('[name="title"]').val(),
       'content' : this.$('[name="content"]').val()
     });

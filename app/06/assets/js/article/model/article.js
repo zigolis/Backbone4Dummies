@@ -6,7 +6,7 @@ app.ArticleModel = Backbone.Model.extend({
     content: 'No content'
   },
 
-  url: function() {
+  urlRoot: function() {
     return '/Backbone4Dummies/api/articles';
   }
 });
