@@ -7,7 +7,7 @@ app.ArticleModel = Backbone.Model.extend({
   },
 
   urlRoot: function() {
-    return '/Backbone4Dummies/api/articles';
+    return 'http://localhost:8000/article';
   },
 
   getTitle: function() {
@@ -16,5 +16,9 @@ app.ArticleModel = Backbone.Model.extend({
 
   getContent: function() {
     return this.get('content');
+  },
+  fetchArticleById:function (id) {
+    this.set("id",id);
+    this.fetch();
   }
 });
