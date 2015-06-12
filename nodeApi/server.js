@@ -3,9 +3,11 @@ var request       = require('request');
 var cors          = require('cors');
 var bodyParser    = require('body-parser');
 var app           = express();
+var dataBase			= require('./database/dbConfig')
 var serveStatic   = require ('serve-static');
 var Api           = require("./api");
 var Router        = require("./routes");
+
 
 app.use(bodyParser.json());
 app.use(cors());

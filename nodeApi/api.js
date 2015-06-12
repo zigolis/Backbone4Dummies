@@ -1,15 +1,17 @@
+var article 		= require('./model/article')
+
 function setup(app) {
-  app.post('/*/article',function () {
-  	
+  app.post('*/article',function (request,response) {
+		article.save(request,response);
   });
   app.put('/article', function () {
-		
+		//todo
 	});
-	app.get('/*/article/:id', function () {
-		
+	app.get('*/article/:id', function (request,response) {
+		article.getById(request, response);
 	});
-	app.get('/*/articles',function(){
-		
+	app.get('*/articles',function(request, response){
+		article.getAll(request, response);
 	});
 }
  
