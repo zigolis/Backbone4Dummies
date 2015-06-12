@@ -9,14 +9,14 @@ app.ArticleView = Backbone.View.extend({
     this.listenTo(this.model, "sync", this.sucess);
     this.getArticleById(1);
   },
-  error:function(){
+  error: function () {
     debugger
   },
-  sucess:function(){
+  sucess: function () {
     debugger
   },
-  getArticleById: function(id) {
-    this.model.fetchArticleById(id)
+  getArticleById: function() {
+    this.model.fetchAllArticles()
   },
 
   showMsg: function(msg) {

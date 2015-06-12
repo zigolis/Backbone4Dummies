@@ -1,40 +1,20 @@
 var app = app || {};
 
 app.ArticleView = Backbone.View.extend({
-  el: 'section',
-
-  events: {
-    'submit form' : 'updateArticle'
+  el: 'section div',
+  template : _.template("<a class='list-group-item active'> <h4 class='list-group-item-heading'> <%=title%> </h4> <p class='list-group-item-text'> <%=content%> </p></a><br>"),
+  
+  initialize: function () {
+    this.collection = new app.ArticleCollection();
+    this.listenTo(this.collection,'sync', this.render);
+    this.listenTo(this.collection,'error', this.error);
   },
-
-  updateArticle: function(e) {
-    this.model = new app.ArticleModel({
-      'id'      : 15,
-      'title'   : this.$('[name="title"]').val(),
-      'content' : this.$('[name="content"]').val()
-    });
-
-    this.model.save()
-
-    .done(_.bind(function() {
-      this.showMsg('Success!');
-      this.resetForm();
-    }, this))
-
-    .error(_.bind(function(data) {
-      this.showMsg('Error: ' + data);
-    }, this));
-
-    e.preventDefault();
+  render: function () {
+    _.each(this.collection.models, function (model) {
+      this.$el.append(this.template(model.toJSON()))
+    }.bind(this));
   },
-
-  showMsg: function(msg) {
-    this.$('span').text(msg);
-  },
-
-  resetForm: function(){
-    this.$('input[type=text], textarea').each(function(){
-      $(this).val('');
-    });
+  error: function (data) {
+    this.$('.error').text("Could not get the articles")
   }
 });

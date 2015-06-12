@@ -5,7 +5,7 @@ function setup(app) {
 		article.save(request,response);
   });
   app.put('/article', function () {
-		//todo
+		//TODO
 	});
 	app.get('*/article/:id', function (request,response) {
 		article.getById(request, response);

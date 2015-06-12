@@ -15,7 +15,7 @@ app.ArticleView = Backbone.View.extend({
     this.showMsg('Success');
     this.resetForm();
   },
-  error: function () {
+  error: function (data) {
     this.showMsg('Error: ' + data);
   },
   createArticle: function(e) {

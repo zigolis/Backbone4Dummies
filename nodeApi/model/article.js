@@ -16,7 +16,6 @@ exports.getAll = function (request, response) {
 };
 
 exports.getById = function (request, response) {
-	console.log(request.params,"bahhhh")
   article.findOne({_id:request.params.id},function (error, data) {
     var strOutput;
     if (error) {

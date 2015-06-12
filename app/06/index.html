@@ -6,35 +6,15 @@
   </head>
   <body>
     <header>
-      <h1>/#!/<span></span></h1>
+      <h1>List of article(s)</h1>
     </header>
 
     <section class="col-md-6">
-      <span></span>
-      <form action="/articles" method="PUT">
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text"
-                 id="title"
-                 name="title"
-                 class="form-control input-lg"
-                 placeholder="Type a title"
-                 required />
-        </div>
-
-        <div class="form-group">
-          <label for="content">Content</label>
-          <textarea name="content"
-                    id="content"
-                    name="content"
-                    class="form-control input-lg"
-                    placeholder="Type a content"
-                    required></textarea>
-        </div>
-
-        <button class="btn btn-lg btn-danger btn-block">Update</button>
-      </form>
+      <div class="list-group">
+      </div>
     </section>
+
+    <p class='error'></p>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/underscore/underscore-min.js"></script>
@@ -42,6 +22,7 @@
 
     <script src="app/06/assets/js/home/view/home.js"></script>
     <script src="app/06/assets/js/article/model/article.js"></script>
+    <script src="app/06/assets/js/article/collection/articles.js"></script>
     <script src="app/06/assets/js/article/view/article.js"></script>
     <script src="app/06/assets/js/app.js"></script>
   </body>
