@@ -7,6 +7,6 @@ app.ArticleModel = Backbone.Model.extend({
   },
 
   urlRoot: function() {
-    return 'http://localhost:8080/article'
+    return '/article'
   }
 });
