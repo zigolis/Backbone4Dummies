@@ -9,7 +9,8 @@ app.ArticleModel = Backbone.Model.extend({
   urlRoot: function() {
     return '/article';
   },
-  saveArticle: function () {
+
+  saveArticle: function() {
   	this.save();
   }
 });
