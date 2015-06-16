@@ -4,6 +4,6 @@ app.HomeView = Backbone.View.extend({
   el: 'header',
 
   initialize: function() {
-    this.$('span').text('home/this.$');
+    this.$('span').text('home');
   }
 });

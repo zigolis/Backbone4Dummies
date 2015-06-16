@@ -1,0 +1,29 @@
+{
+  "name": "Backbone4Dummies",
+  "version": "1.0.0",
+  "description": "Source code from Backbone4Dummies talk.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zigolis/Backbone4Dummies.git"
+  },
+  "keywords": [
+    "Backbone",
+    "dummies",
+    "getStarted"
+  ],
+  "author": "Gabriel Zigolis <gabriel.zigolis@gmail.com> (http://www.zigolis.com) && Renan Carvalho <renansscarvalho@gmail.com> (http://www.rcarvalhojs.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zigolis/Backbone4Dummies/issues"
+  },
+  "homepage": "https://github.com/zigolis/Backbone4Dummies",
+  "devDependencies": {
+    "body-parser": "^1.12.4",
+    "cors": "^2.7.1",
+    "express": "^4.12.4",
+    "request": "^2.57.0",
+    "serve-static": "^1.9.3"
+  }
+}

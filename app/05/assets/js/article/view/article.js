@@ -7,23 +7,25 @@ app.ArticleView = Backbone.View.extend({
     'submit form' : 'createArticle'
   },
 
+  initialize: function () {
+    this.model = new app.ArticleModel();
+    this.listenTo(this.model,'sync', this.success);
+    this.listenTo(this.model,'error', this.error);
+  },
+
+  success: function () {
+    this.showMsg('Success');
+    this.resetForm();
+  },
+
+  error: function (data) {
+    this.showMsg('Error: ' + data);
+  },
+
   createArticle: function(e) {
-    this.model = new app.ArticleModel({
-      'title'   : this.$('[name="title"]').val(),
-      'content' : this.$('[name="content"]').val()
-    });
-
-    this.model.save()
-
-    .done(_.bind(function() {
-      this.showMsg('Success!');
-      this.resetForm();
-    }, this))
-
-    .error(_.bind(function(data) {
-      this.showMsg('Error: ' + data);
-    }, this));
-
+    this.model.set('title', this.$('[name="title"]').val());
+    this.model.set('content', this.$('[name="content"]').val());
+    this.model.saveArticle()
     e.preventDefault();
   },
 

@@ -1,12 +1,12 @@
 {
   "name": "Backbone4Dummies",
-  "version": "0.0.1",
-  "homepage": "https://github.com/zigolis/Backbone4Dummies",
-  "license": "MIT",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zigolis/Backbone4Dummies.git",
+  "license": "ISC",
   "dependencies": {
-    "backbone": "~1.2.0",
-    "underscore": "~1.8.3",
-    "jquery": "~2.1.4",
-    "bootstrap": "~3.3.4"
+    "backbone": "^1.2.1",
+    "bootstrap": "^3.3.4",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
   }
 }

@@ -1,5 +1,7 @@
 var app = app || {};
 
+
+
 app.HomeView = Backbone.View.extend({
   el: 'header',
 
@@ -8,7 +10,7 @@ app.HomeView = Backbone.View.extend({
   },
 
   initialize: function() {
-    this.$('span').text('home/this');
+    this.$('span').text('home');
   },
 
   print: function() {
