@@ -12,7 +12,7 @@ var Router        = require("./routes");
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use("/node_modules", express.static(__dirname + '/../node_modules'));
+app.use("/vendor", express.static(__dirname + '/../vendor'));
 app.use("/app", express.static(__dirname + '/../app'));
 
 Api.setup(app);
