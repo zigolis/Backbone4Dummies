@@ -29,7 +29,7 @@ There are the basic requirements for you application:
 
 		bower install
 
-## How to run ?
+## How to run?
 
 1. Go to api-node folder and run `node server.js`
 
